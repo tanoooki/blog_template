@@ -1,0 +1,175 @@
+@import './dropdown.css';
+
+body, p, span, h1, h2, h3, a, li, ul {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+a {
+    color:#000;
+}
+
+img {
+    cursor: pointer;
+}
+
+body {
+    font-family: "Manrope";
+}
+
+.container {
+    max-width: 1200px;
+    padding-left:  20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+.topic_img {
+    max-width: 350px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 60px;
+    padding-top: 20px;
+}
+
+.menu a {
+    padding: 10px;
+}
+
+.menu_mobile {
+    display: none;
+}
+
+.sub {
+    background: rgb(224, 123, 0);
+    color: #000;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.sub:hover {
+    background: rgb(255, 140, 0);
+
+}
+
+.topic {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 60px;
+    padding-bottom: 60px;
+}
+
+.destaque h2, .destaque span {
+    display: block;
+    padding-bottom: 38px;
+}
+
+
+.user {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.user img {
+    max-width: 60px;
+}
+
+.dados {
+    font-size: .75rem;
+    grid-column: 2/-1;
+    align-self: center;
+    text-align: start;
+    padding-left: .5rem;
+}
+
+.noticias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.not_quadro, .not_img {
+    max-width: 320px;
+}
+
+.not_quadro h2 {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+span {
+    font-size: .85rem;
+}
+
+.not_quadro .user {
+    padding-top: 20px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 35px;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 750px) {
+    .topic {
+        display: flex;
+        flex-direction: column;
+    }
+    .topic_img {
+        max-width:700px;
+        max-height:200px;
+        width: auto;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    .not_quadro{ 
+        width: 90vw;
+    }
+    .not_img {
+        max-width: 90vw;
+        width: 100vw;
+        height: 100px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 8px;
+    }
+
+    .noticias {
+        display: grid;
+    }
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    footer img {
+        padding-bottom: 10px;
+    }
+}
+
+
+@media (max-width:550px) {
+    .menu {
+        display: none;
+    }
+    .menu_mobile {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 60px;
+        padding-top: 20px;
+    }
+}
